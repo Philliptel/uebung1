@@ -13,6 +13,7 @@ def number_eight():
     print(64 // 8)
     print(2**3)
 
+
 number_eight()
 
 
@@ -37,6 +38,8 @@ def swap_integers():
     y = z
     print("x = " + str(x))
     print("y = " + str(y))
+
+
 swap_integers()
 
 
@@ -51,6 +54,7 @@ def check_numbers(number1, number2):
         return True
     else:
         return False
+
 #variablen erstellen und diese beim aufruf der funktion verweden
 print(check_numbers(int(input("1. Number:")), int(input("2. Number:"))))
 
@@ -72,6 +76,8 @@ def sum_up(number1, number2):
 
     print(" =", result)
     return result
+
+
 sum_up(10,20)
 
 
@@ -79,9 +85,11 @@ def sequence(number):
     numbers = [0,1,2,3,4,5,6,7,8,9]
     if number >= 0 and number < 10:
         numbers.remove(number)
-        print(numbers)
     else:
         print("Error - this number is not between 0 - 9")
+    for x in numbers:
+        print(x,end=" ")
+
 
 sequence(int(input("Type in a number between 0-9: ")))
 
@@ -91,6 +99,7 @@ def check_string(text):
         return True
     else:
         return False
+
 
 check_string(input("Type in a word: "))
 
@@ -102,4 +111,6 @@ def triangle(rows):
         print("* " * start)
         start = new_row
 
+
 triangle(int(input("Type in a number: ")))
+#Warum muss man zwischen einer Funktion und dem Aufrufen einer Funktion 2 Zeilen Abstand lassen? Ich habe es ohne Abstand auch schon aufgerufen und es hat funktioniert. Ist es wegen der übersichtlicheren Lesbarkeit?
